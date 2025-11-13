@@ -24,5 +24,6 @@ if (other.object_index == Obj_ballred
 if (global.lives <= 0) {
         audio_play_sound(snd_gameover, 1, false);
         show_message("GAME OVER! Suas vidas acabaram.");
-        game_end();
+         audio_stop_all();
+    room_goto(room_perdeu);
 }
